@@ -1,3 +1,5 @@
+from search_algorithms.bfs import breadth_first_search
+
 """
 Maze Solver - AI Agent
 Solves a maze using Breadth-First Search (BFS).
@@ -28,8 +30,10 @@ class Maze:
         
         return successors
 
+
 def bfs_maze_solver(maze):
-    """ Solves the maze using BFS. """
+    """ Solves the maze using the imported BFS function. """
+
     frontier = deque([maze.start])
     explored = set()
     parent_map = {maze.start: None}  # To reconstruct the path
@@ -49,7 +53,7 @@ def bfs_maze_solver(maze):
                 frontier.append(neighbor)
                 parent_map[neighbor] = state
 
-    return None  # No solution found
+    return breadth_first_search(maze.start, maze.is_goal, maze.get_successors)
 
 # Run the maze solver
 if __name__ == "__main__":
