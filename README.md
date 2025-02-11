@@ -5,6 +5,7 @@ This repository contains implementations of AI algorithms and problem-solving te
 ## Implemented AI Problems
 - **Maze Solver** (BFS-based) → Finds the shortest path in a 2D maze.
 - **Vacuum Bot** (Reflex agent) → Simulates a simple cleaning robot.
+- **8-Puzzle Solvability Checker**
 
 ## Implemented AI Algorithms
 - **Breadth-First Search (BFS)** → Graph traversal and pathfinding.
@@ -41,6 +42,20 @@ The **Vacuum Bot** simulates an intelligent cleaning agent in a **2D grid world*
 
 ### How to Run:
 python3 problem_solvers/vacuum_bot.py
+
+## 8-Puzzle Solvability Checker
+
+This function determines whether an 8-puzzle configuration is solvable by analyzing the parity of tile inversions.
+
+### Example Usage:
+
+- from problem_solvers.eight_puzzle import is_solvable
+
+- initial_state = [1, 2, 3, 4, 6, 5, 7, 8, 0]
+- goal_state = [1, 2, 3, 4, 5, 6, 7, 8, 0]
+
+- print(is_solvable(initial_state, goal_state))  # True or False
+
 
 ## Running Tests
 This repository includes **unit tests** to ensure correctness.
